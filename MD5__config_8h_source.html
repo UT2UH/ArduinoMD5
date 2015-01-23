@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>MD5 and HMAC-MD5 class: MD5 and HMAC-MD5 library for Arduino and Raspberry pi.</title>
+<title>MD5 and HMAC-MD5 class: MD5_config.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,7 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -77,83 +77,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="classMD5.html">MD5</a> and HMAC-MD5 library for Arduino and Raspberry pi. </div>  </div>
+<div class="title">MD5_config.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="Goals"></a>
-Design Goals</h1>
-<p>This library is designed to be... </p><ul>
-<li>Fast and efficient </li>
-<li>Able to effectivelly hash any size of string </li>
-<li>Able to use any format of key for HMAC (hex or string) </li>
-<li>Easy for the user to use in his programms </li>
-<li>to hash using <a class="el" href="classMD5.html">MD5</a> </li>
-<li>to hash using HMAC-MD5</li>
-</ul>
-<h1><a class="anchor" id="Acknowlegments"></a>
-Acknowlegments</h1>
-<p>This is an <a class="el" href="classMD5.html">MD5</a> library for the Arduino, based on tzikis's <a class="el" href="classMD5.html">MD5</a> library, which you can find <a href="https://github.com/tzikis/arduino">here:</a>.<br />
- Tzikis library was based on scottmac`s library, which you can find <a href="https://github.com/scottmac/arduino">here:</a><br />
-</p>
-<h1><a class="anchor" id="Installation"></a>
-Installation</h1>
-<h3>Arduino</h3>
-<p>Create a folder named <em><a class="el" href="classMD5.html">MD5</a></em> in the <em>libraries</em> folder inside your Arduino sketch folder. If the libraries folder doesn't exist, create it. Then copy everything inside. (re)launch the Arduino IDE.<br />
- You're done. Time for a mojito</p>
-<h3>Raspberry pi</h3>
-<p><b>install</b><br />
-<br />
-</p>
-<p>sudo make install<br />
- cd examples_Rpi<br />
- make<br />
-<br />
-</p>
-<p><b>What to do after changes to the library</b><br />
-<br />
- sudo make clean<br />
- sudo make install<br />
- cd examples_Rpi<br />
- make clean<br />
- make<br />
-<br />
- <b>What to do after changes to a sketch</b><br />
-<br />
- cd examples_Rpi<br />
- make &lt;sketch&gt;<br />
-<br />
- or <br />
- make clean<br />
- make<br />
-<br />
-<br />
- <b>How to start a sketch</b><br />
-<br />
- cd examples_Rpi<br />
- sudo ./&lt;sketch&gt;<br />
-<br />
-</p>
-<h1><a class="anchor" id="News"></a>
-News</h1>
-<p>If issues are discovered with the documentation, please report them <a href="https://github.com/spaniakos/spaniakos.github.io/issues">here</a> </p>
-<h1><a class="anchor" id="Useful"></a>
-Useful References</h1>
-<p>Please refer to:</p>
-<ul>
-<li><a href="http://spaniakos.github.io/ArduinoMD5/classArduinoMD5.html"><b>KEYGEN</b> Class Documentation</a> </li>
-<li><a href="https://github.com/spaniakos/ArduinoMD5/archive/master.zip"><b>Download</b></a> </li>
-<li><a href="https://github.com/spaniakos/ArduinoMD5/"><b>Source Code</b></a> </li>
-<li><a href="http://spaniakos.github.io/">All spaniakos Documentation Main Page</a></li>
-</ul>
-<h1><a class="anchor" id="Board_Support"></a>
-Board Support</h1>
-<p>Most standard Arduino based boards are supported:</p><ul>
-<li>Arduino</li>
-<li>Intel Galileo support</li>
-<li>Raspberry Pi Support</li>
-<li>The library has not been tested to other boards, but it should suppport ATMega 328 based boards,Mega Boards,Arduino Due,ATTiny board </li>
-</ul>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MD5_config_h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MD5_config_h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define HMAC_IPAD 0x36</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define HMAC_OPAD 0x5c</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define BLOCK_SIZE 16</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#if  (defined(__linux) || defined(linux)) &amp;&amp; !defined(__ARDUINO_X86__)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">  #define MD5_LINUX</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">  #include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">  #include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">  #include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">  #include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">  #include &lt;sys/time.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">  #include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">  #include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Fri Jan 23 2015 14:43:16 for MD5 and HMAC-MD5 class by &#160;<a href="http://www.doxygen.org/index.html">
